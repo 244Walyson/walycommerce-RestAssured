@@ -142,7 +142,7 @@ public class ProductControllerRA {
     @Test
     void insertShouldReturnUnprocessableEntityWhenInvalidDescription() {
 
-        postProductInstance.put("description", "");
+        postProductInstance.put("description", "s");
         JSONObject newProduct = new JSONObject(postProductInstance);
         given()
                 .header("Content-type", "application-json")
